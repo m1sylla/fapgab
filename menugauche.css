@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background-color: rgba(55, 170, 39, 0.719);
+
+}
+.side-bar{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 80vh;
+    background: #ecf0f3;
+    padding: 12px;
+    box-shadow:       -3px  -3px  7px #ffffff,
+                       2px   2px  2px black,
+                inset  -3px  -3px 7px #ffffff,
+                inset   2px   2px 2px black;
+
+}
+.side-bar .title .logo{
+    font-size: 27px;
+    font-weight: 600;
+    color: #31344b;
+    border-bottom: 1px solid red;
+}
+.side-bar ul{
+    margin-top: 35px;
+    list-style: none;
+
+}
+.side-bar ul a{
+    text-align: center;
+    color: #31344b;
+    text-decoration: none;
+    display: block;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 25px;
+    background: pink;
+    border-radius: 5px;
+    box-shadow:     -3px  -3px  7px #ffffff,
+                    2px   2px  2px black;
+    position: relative;
+}
+.media-icons{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #6616d0,#ac34e7);
+}
+.media-icons a{
+    margin: 0 4px;
+    font-size: 17px;
+    height: 40px;
+    width: 40px;
+    background: pink;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    box-shadow:     -3px  -3px  7px #ffffff,
+                    2px   2px  2px black;
+    position: relative;
+}
+.side-bar ul a:hover::before,
+.media-icons a:hover::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px   3px 5px #ceced1;
+
+}
+.side-bar ul a:hover{
+    color: blue;
+}
+.side-bar ul a:hover::before{
+    border-radius: 6px;
+}
+.media-icons a:hover::before{
+    border-radius: 50%;
+}
+.media-icons a:nth-child(1){
+    color:red ;
+}
+.media-icons a:nth-child(2){
+    color: aqua;
+}
+.media-icons a:nth-child(3){
+    color: blue;
+}
+.media-icons a:nth-child(4){
+    color: yellow;
+}
+.media-icons a:nth-child(5){
+    color:chartreuse ;
+}
