@@ -1,11 +1,39 @@
 body {
-    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
 }
-
-h2 {
-    margin: 10px;
-}
-
 a {
-    color: black;
+    text-decoration: none;
 }
+ul {
+    list-style: none;
+}
+.wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site-header::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+.site-header__logo {
+        float: left;
+    }
+.site-header__slogan {
+        float: left;
+    }
+.site-header__nav {
+        float: right;
+    }
+.social-link::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+.social-link li {
+        float: left;
+        background-color: #216045;
+    }

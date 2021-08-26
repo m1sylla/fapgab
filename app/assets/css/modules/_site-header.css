@@ -1,0 +1,15 @@
+.site-header {
+    border-bottom: 2px solid $mainGreen;
+    &__content {
+        @mixin clearfix;
+    }
+    &__logo {
+        float: left;
+    }
+    &__slogan {
+        float: left;
+    }
+    &__nav {
+        float: right;
+    }
+}

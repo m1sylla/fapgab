@@ -1,0 +1,7 @@
+.social-link {
+    @mixin clearfix;
+    li {
+        float: left;
+        background-color: $mainGreen;
+    }
+}

@@ -1,14 +1,27 @@
-var gulp = require('gulp'),
-    watch = require('gulp-watch');
+var
+// modules
+    gulp = require('gulp'),
+    watch = require('gulp-watch'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cssvars = require('postcss-simple-vars'),
+    nested = require('postcss-nested'),
+    mixins = require('postcss-mixins'),
+    cssImport = require('postcss-import'),
+    // browserSync = require('browser-sync').creat()
+
+    // folders
+    src = './app/assets/'
+build = './app/temp/';
 
 
+function css() {
+    return gulp
+        .src(src + 'css/styles.css')
+        .pipe(postcss([cssImport(), mixins(), cssvars(), autoprefixer(), nested()]))
+        .pipe(gulp.dest(build + 'css'));
+}
 
-gulp.task('css', () =>
-    gulp.src('./app/assets/css/styles.css')
-    .pipe(gulp.dest('./app/temp/css'))
-);
+exports.css = css;
 
-gulp.task('watch', gulp.series('css', (done) => {
-    gulp.watch('./app/assets/css/**/*.css', gulp.series('css'));
-    done();
-}));
+//   gulp.watch('./app/assets/css/**/*.css', gulp.series('css'));
